@@ -3,7 +3,8 @@ import { connectToDatabase } from "@/lib/mongodb";
 import RaceCategory from "@/lib/models/RaceCategory";
 import { raceCategories as fallback } from "@/lib/data/eventData";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function GET() {
   try {

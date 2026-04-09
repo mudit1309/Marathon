@@ -3,7 +3,8 @@ import { connectToDatabase } from "@/lib/mongodb";
 import Sponsor from "@/lib/models/Sponsor";
 import { sponsorsData } from "@/lib/data/eventData";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export async function GET() {
   try {
