@@ -33,7 +33,7 @@ export default function RegistrationCTA() {
           {/* Glow accents */}
           <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-brand-cyan-500/25 blur-[120px]" />
           <div className="absolute -bottom-40 right-1/4 h-96 w-96 rounded-full bg-brand-eco-500/20 blur-[120px]" />
-          <div className="absolute inset-0 bg-circuit-pattern opacity-40" />
+          <div className="absolute inset-0 bg-track-stripes opacity-60" />
 
           <div className="relative grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">

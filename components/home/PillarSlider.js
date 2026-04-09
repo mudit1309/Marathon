@@ -38,7 +38,7 @@ const PILLARS = [
     tagline: "5,000+ runners. 3 races. One legendary day.",
     description:
       "Noida's biggest sporting weekend takes over the city on 17 May 2026. Half Marathon, 10K and 5K Fun Run — built for athletes, beginners and everyone in between.",
-    image: "/content/pillar-platform.jpg",
+    image: "/pillar-platform.jpg",
     imageAlt: "Mojo Marathons Platform at a Glance",
     color: "red",
     chips: [
@@ -62,7 +62,7 @@ const PILLARS = [
     tagline: "A community that shows up, runs hard, cheers louder.",
     description:
       "Corporate teams, urban youth, fitness crews and families — Mojo unites NCR's most active, ambitious and health-focused community every race day.",
-    image: "/content/pillar-changemakers.jpg",
+    image: "/pillar-changemakers.jpg",
     imageAlt: "Connecting with NCR's Changemakers",
     color: "yellow",
     chips: [
@@ -87,7 +87,7 @@ const PILLARS = [
     tagline: "20,000+ cumulative on-ground & digital reach.",
     description:
       "A three-phase visibility engine: Pre-Event momentum, Event Day maximum exposure, and Post-Event lasting value. Every sponsor gets the full athletic spotlight.",
-    image: "/content/pillar-visibility.jpg",
+    image: "/pillar-visibility.jpg",
     imageAlt: "Amplifying Impact 360 Brand Visibility",
     color: "orange",
     chips: [

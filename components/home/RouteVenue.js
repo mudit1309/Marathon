@@ -56,7 +56,7 @@ export default function RouteVenue() {
           {/* Map visual */}
           <Reveal className="lg:col-span-7">
             <div className="relative overflow-hidden border-2 border-brand-cyan-500/40 bg-gradient-to-br from-brand-navy-800 via-brand-navy-900 to-brand-navy-950 p-6 shadow-athletic">
-              <div className="absolute inset-0 bg-circuit-pattern opacity-40" />
+              <div className="absolute inset-0 bg-track-stripes opacity-60" />
 
               {/* SVG fake route */}
               <div className="relative aspect-[4/3] w-full">

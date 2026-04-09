@@ -39,8 +39,7 @@ const SOCIAL_ICONS = {
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-brand-navy-950">
-      <div className="pointer-events-none absolute inset-0 bg-circuit-pattern opacity-40" />
-      <div className="pointer-events-none absolute inset-0 circuit-bg" />
+      <div className="pointer-events-none absolute inset-0 bg-track-stripes opacity-60" />
 
       <div className="container-narrow relative z-10 py-16">
         <div className="grid gap-12 lg:grid-cols-12">
@@ -154,7 +153,7 @@ export default function Footer() {
         <div className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Mojo Marathons. All rights reserved. ·
-            Built with performance, technology and sustainability.
+            Built with passion, performance and a greener planet.
           </p>
           <div className="flex items-center gap-3">
             {Object.entries(eventInfo.socials).map(([key, url]) => {

@@ -26,18 +26,18 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Mojo Marathons 2026 | Noida's Eco-Cyber Half Marathon | 17 May 2026",
+      "Mojo Marathons 2026 | Noida's Premier Half Marathon | 17 May 2026",
     template: "%s | Mojo Marathons 2026",
   },
   description:
-    "Join Mojo Marathons 2026 — Noida's premier eco-cyber half marathon on 17 May 2026. 21K, 10K & 5K categories. 5,000+ runners, sustainable race-day, championship experience. Register now.",
+    "Join Mojo Marathons 2026 — Noida's biggest half marathon on 17 May 2026. 21K, 10K & 5K categories. 5,000+ runners, sustainable race-day, championship experience. Register now.",
   keywords: [
     "Mojo Marathons",
     "Noida Marathon 2026",
     "Half Marathon Noida",
     "21K Noida",
     "10K Noida",
-    "Eco Marathon India",
+    "Eco Friendly Marathon India",
     "Delhi NCR Marathon",
     "Noida Running Event",
     "Sustainable Marathon",
@@ -56,21 +56,21 @@ export const metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Mojo Marathons",
-    title: "Mojo Marathons 2026 | Noida's Eco-Cyber Half Marathon",
+    title: "Mojo Marathons 2026 | Noida's Premier Half Marathon",
     description:
-      "Noida's premier half marathon on 17 May 2026. Built on performance, technology and sustainability. Register for 21K, 10K or 5K.",
+      "Noida's premier half marathon on 17 May 2026. Built on passion, performance and a greener planet. Register for 21K, 10K or 5K.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mojo Marathons 2026 — Noida's Eco-Cyber Half Marathon",
+        alt: "Mojo Marathons 2026 — Noida's Premier Half Marathon",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mojo Marathons 2026 | Noida's Eco-Cyber Half Marathon",
+    title: "Mojo Marathons 2026 | Noida's Premier Half Marathon",
     description:
       "Join 5,000+ runners on 17 May 2026 in Noida. 21K, 10K & 5K categories. Register now.",
     images: ["/og-image.jpg"],
@@ -106,7 +106,7 @@ export default function RootLayout({ children }) {
     "@type": "SportsEvent",
     name: "Mojo Marathons 2026",
     description:
-      "Noida's premier eco-cyber half marathon — 21K, 10K and 5K categories with chip timing, sustainable race-day operations and 5,000+ participants.",
+      "Noida's premier half marathon — 21K, 10K and 5K categories with chip timing, sustainable race-day operations and 5,000+ participants.",
     startDate: eventInfo.eventDate,
     endDate: eventInfo.eventDate,
     eventStatus: "https://schema.org/EventScheduled",

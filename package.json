@@ -2,7 +2,7 @@
   "name": "mojo-marathons",
   "version": "1.0.0",
   "private": true,
-  "description": "Mojo Marathons - Noida's premier eco-cyber half marathon event website",
+  "description": "Mojo Marathons - Noida's premier half marathon event website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

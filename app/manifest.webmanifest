@@ -1,11 +1,11 @@
 {
   "name": "Mojo Marathons 2026",
   "short_name": "Mojo Marathons",
-  "description": "Noida's eco-cyber half marathon — 17 May 2026.",
+  "description": "Noida's biggest half marathon — 17 May 2026.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#020a18",
-  "theme_color": "#020a18",
+  "background_color": "#050505",
+  "theme_color": "#050505",
   "icons": [
     {
       "src": "/icon-192.png",

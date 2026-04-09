@@ -4,7 +4,6 @@ import {
   GraduationCap,
   Dumbbell,
   Users,
-  Smartphone,
   Leaf,
   HeartPulse,
   TrendingUp,
@@ -17,10 +16,10 @@ import { audienceSegments } from "@/lib/data/eventData";
 const ICONS = { Briefcase, GraduationCap, Dumbbell, Users };
 
 const PSYCHOGRAPHICS = [
-  { icon: Smartphone, label: "Tech-Savvy" },
+  { icon: TrendingUp, label: "Goal-Driven" },
   { icon: Leaf, label: "Eco-Conscious" },
   { icon: HeartPulse, label: "Health-Focused" },
-  { icon: TrendingUp, label: "Ambitious" },
+  { icon: Dumbbell, label: "Fitness-First" },
 ];
 
 export default function AudienceTargeting() {
@@ -35,7 +34,7 @@ export default function AudienceTargeting() {
               <span className="gradient-text">NCR's Changemakers.</span>
             </>
           }
-          description="A community of 5,000+ runners from four distinct audiences united by one psychographic: tech-savvy, eco-conscious, health-focused and ambitious."
+          description="A community of 5,000+ runners from four distinct audiences united by one mindset: goal-driven, eco-conscious, health-focused and fitness-first."
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-12">

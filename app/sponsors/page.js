@@ -6,7 +6,7 @@ import ContactSection from "@/components/home/ContactSection";
 export const metadata = {
   title: "Sponsors & Partners",
   description:
-    "Mojo Marathons offers sponsors premium visibility across 20,000+ highly-engaged NCR runners — from corporate professionals to tech-native youth and family audiences.",
+    "Mojo Marathons offers sponsors premium visibility across 20,000+ highly-engaged NCR runners — from corporate professionals to student athletes and family audiences.",
   alternates: { canonical: "/sponsors" },
 };
 

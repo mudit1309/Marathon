@@ -58,18 +58,21 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="mt-5 font-display text-[18vw] font-black leading-[0.82] tracking-tight text-white sm:text-8xl lg:text-[9rem] xl:text-[11rem]"
+              className="mt-5 font-display text-[13vw] font-black leading-[0.85] tracking-tight text-white sm:text-7xl lg:text-[7rem] xl:text-[8.5rem]"
             >
-              RUN
+              RUN TO THE
               <br />
               <span className="relative inline-block">
                 <span className="relative z-10 text-brand-cyan-500">
-                  HARDER
+                  FUTURE,
                 </span>
                 <span className="absolute inset-x-0 bottom-3 -z-0 h-6 bg-brand-eco-500/50 blur-md" />
               </span>
               <br />
-              <span className="text-stroke text-white">THAN EVER.</span>
+              <span className="text-stroke text-white">PROTECT</span>{" "}
+              <span className="text-white">THE</span>
+              <br />
+              <span className="text-brand-eco-500">PLANET.</span>
             </motion.h1>
 
             <motion.p

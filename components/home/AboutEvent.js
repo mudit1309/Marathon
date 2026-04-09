@@ -1,11 +1,11 @@
-import { Shield, Sparkles, Cpu, Leaf } from "lucide-react";
+import { Shield, Sparkles, Medal, Leaf } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 
 const PILLARS = [
   {
-    icon: Cpu,
-    title: "Tech-First Race Day",
+    icon: Medal,
+    title: "Championship Race Day",
     description:
       "Live chip timing, real-time tracking, instant certificates and a dashboard every runner can share.",
   },
