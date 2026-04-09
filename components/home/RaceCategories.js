@@ -52,7 +52,7 @@ export default function RaceCategories() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7, delay: idx * 0.12 }}
                 className={cn(
-                  "group relative flex flex-col overflow-hidden rounded-3xl border bg-white/[0.03] p-8 backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:bg-white/[0.06]",
+                  "group relative flex flex-col overflow-hidden border-2 bg-brand-navy-900/60 p-8 backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:bg-brand-navy-900/90",
                   style.ring
                 )}
               >
@@ -64,12 +64,12 @@ export default function RaceCategories() {
                 />
 
                 <div className="relative flex items-start justify-between">
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white">
+                  <div className="inline-flex h-14 w-14 items-center justify-center border-2 border-white/15 bg-white/5 text-white">
                     <Icon className={cn("h-6 w-6", style.number)} />
                   </div>
                   <span
                     className={cn(
-                      "rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wider",
+                      "border-2 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest",
                       style.chip
                     )}
                   >
@@ -102,13 +102,13 @@ export default function RaceCategories() {
                 </p>
 
                 <div className="relative mt-6 grid grid-cols-2 gap-3 text-xs">
-                  <div className="flex items-center gap-2 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-2">
+                  <div className="flex items-center gap-2 border border-white/10 bg-white/[0.03] px-3 py-2">
                     <Clock className="h-3.5 w-3.5 text-white/50" />
-                    <span className="text-white/80">{cat.startTime}</span>
+                    <span className="font-display font-semibold uppercase tracking-wider text-white/80">{cat.startTime}</span>
                   </div>
-                  <div className="flex items-center gap-2 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-2">
+                  <div className="flex items-center gap-2 border border-white/10 bg-white/[0.03] px-3 py-2">
                     <Users2 className="h-3.5 w-3.5 text-white/50" />
-                    <span className="text-white/80">
+                    <span className="font-display font-semibold uppercase tracking-wider text-white/80">
                       {cat.minAge}+ years
                     </span>
                   </div>

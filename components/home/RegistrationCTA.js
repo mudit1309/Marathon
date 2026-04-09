@@ -29,7 +29,7 @@ export default function RegistrationCTA() {
   return (
     <section id="register" className="relative py-24">
       <div className="container-narrow">
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-brand-navy-900 via-brand-navy-800 to-brand-navy-900 p-8 sm:p-14">
+        <div className="relative overflow-hidden border-2 border-brand-cyan-500/50 bg-gradient-to-br from-brand-navy-900 via-brand-navy-800 to-brand-navy-950 p-8 sm:p-14">
           {/* Glow accents */}
           <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-brand-cyan-500/25 blur-[120px]" />
           <div className="absolute -bottom-40 right-1/4 h-96 w-96 rounded-full bg-brand-eco-500/20 blur-[120px]" />
@@ -82,10 +82,10 @@ export default function RegistrationCTA() {
                 {BENEFITS.map(({ icon: Icon, title, description }) => (
                   <div
                     key={title}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur"
+                    className="border-2 border-white/15 bg-brand-navy-950/60 p-4 backdrop-blur transition-colors hover:border-brand-cyan-500/60"
                   >
                     <Icon className="h-5 w-5 text-brand-cyan-400" />
-                    <div className="mt-3 text-sm font-bold text-white">
+                    <div className="mt-3 font-display text-sm font-bold uppercase tracking-wider text-white">
                       {title}
                     </div>
                     <div className="mt-1 text-xs text-white/60">

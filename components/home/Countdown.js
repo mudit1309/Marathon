@@ -43,7 +43,7 @@ export default function Countdown() {
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-eco-500/50 to-transparent" />
       </div>
       <div className="container-narrow">
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-brand-navy-800/80 via-brand-navy-900/80 to-brand-navy-950/80 p-8 backdrop-blur-xl sm:p-14">
+        <div className="relative overflow-hidden border-2 border-brand-cyan-500/60 bg-gradient-to-br from-brand-navy-800 via-brand-navy-900 to-brand-navy-950 p-8 backdrop-blur-xl sm:p-14">
           <div className="absolute -top-40 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-brand-cyan-500/20 blur-3xl" />
           <div className="absolute -bottom-40 left-1/4 h-80 w-80 rounded-full bg-brand-eco-500/15 blur-3xl" />
 
@@ -74,7 +74,7 @@ export default function Countdown() {
               {blocks.map((b) => (
                 <div
                   key={b.label}
-                  className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur sm:p-6"
+                  className="relative overflow-hidden border-2 border-brand-cyan-500/40 bg-brand-navy-900/90 p-4 text-center backdrop-blur sm:p-6"
                 >
                   <div className="font-display text-4xl font-black tabular-nums text-white sm:text-5xl">
                     {String(b.value).padStart(2, "0")}

@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Barlow", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Bebas Neue", "Oswald", "Impact", "Arial Black", sans-serif;
 
-  --brand-navy-950: #01050c;
-  --brand-navy-900: #020a18;
-  --brand-navy-800: #04152f;
-  --brand-navy-700: #061f47;
-  --brand-cyan-500: #00c2eb;
-  --brand-eco-500: #10b981;
+  --asphalt-950: #050505;
+  --asphalt-900: #0a0a0a;
+  --asphalt-800: #121212;
+  --asphalt-700: #1a1a1a;
+  --racing-red: #e11d2e;
+  --electric-yellow: #facc15;
+  --speed-orange: #f97316;
 }
 
 @layer base {
@@ -24,14 +25,20 @@
   body {
     @apply bg-brand-navy-950 text-white;
     font-family: var(--font-sans);
+    font-weight: 500;
     background-image: radial-gradient(
-        ellipse 80% 50% at 50% -20%,
-        rgba(0, 194, 235, 0.15),
+        ellipse 80% 50% at 50% -10%,
+        rgba(225, 29, 46, 0.22),
         transparent
       ),
       radial-gradient(
-        ellipse 60% 40% at 80% 50%,
-        rgba(16, 185, 129, 0.08),
+        ellipse 60% 40% at 90% 60%,
+        rgba(250, 204, 21, 0.10),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 10% 80%,
+        rgba(249, 115, 22, 0.08),
         transparent
       );
     background-attachment: fixed;
@@ -45,28 +52,30 @@
   h6 {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
+    line-height: 0.95;
+    text-transform: uppercase;
   }
 
   ::selection {
-    background: rgba(0, 194, 235, 0.35);
+    background: #e11d2e;
     color: white;
   }
 
-  /* Scrollbar */
+  /* Racing-red scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #020a18;
+    background: #050505;
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00c2eb, #10b981);
-    border-radius: 10px;
+    background: linear-gradient(180deg, #e11d2e, #f97316);
+    border-radius: 0;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #00c2eb;
+    background: #facc15;
   }
 }
 
@@ -75,67 +84,105 @@
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
+  /* Primary CTA — bold, blocky, racing-red with yellow underline on hover */
   .btn-primary {
-    @apply relative inline-flex items-center justify-center gap-2 rounded-full
-           bg-gradient-to-r from-brand-cyan-500 to-brand-eco-500
-           px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-brand-navy-900
-           shadow-glow transition-all duration-300
-           hover:shadow-glow-eco hover:scale-[1.03] active:scale-[0.98];
+    @apply relative inline-flex items-center justify-center gap-2
+           bg-brand-cyan-500 px-8 py-4
+           font-display text-base font-bold uppercase tracking-[0.15em] text-white
+           shadow-glow transition-all duration-200
+           hover:-translate-y-0.5 hover:bg-brand-cyan-400
+           active:translate-y-0;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
   }
 
+  .btn-primary::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-2 bottom-0 h-1 bg-brand-eco-500 opacity-0 transition-all duration-200;
+  }
+
+  .btn-primary:hover::after {
+    @apply opacity-100;
+  }
+
+  /* Secondary — ghost with bold border */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full
-           border border-brand-cyan-500/40 bg-brand-navy-900/50 backdrop-blur
-           px-7 py-3.5 text-sm font-bold uppercase tracking-wider text-white
-           transition-all duration-300
-           hover:border-brand-cyan-400 hover:bg-brand-cyan-500/10;
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-white bg-transparent
+           px-8 py-[14px]
+           font-display text-base font-bold uppercase tracking-[0.15em] text-white
+           transition-all duration-200
+           hover:-translate-y-0.5 hover:bg-white hover:text-brand-navy-900;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full
-           px-5 py-2.5 text-sm font-semibold text-white/80
-           transition-colors hover:text-brand-cyan-400;
+    @apply inline-flex items-center justify-center gap-2
+           px-5 py-2.5 font-display text-sm font-bold uppercase tracking-wider text-white/80
+           transition-colors hover:text-brand-eco-400;
   }
 
+  /* Huge sporty section heading */
   .section-heading {
-    @apply text-4xl font-black leading-[1.05] sm:text-5xl lg:text-6xl;
+    @apply font-display text-5xl font-black leading-[0.9] sm:text-6xl lg:text-7xl xl:text-8xl;
+    letter-spacing: -0.01em;
   }
 
+  /* Bold sporty eyebrow — rectangle with cut corner */
   .section-eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border
-           border-brand-cyan-500/30 bg-brand-cyan-500/10
-           px-4 py-1.5 text-xs font-bold uppercase tracking-widest
-           text-brand-cyan-400;
+    @apply relative inline-flex items-center gap-2
+           bg-brand-cyan-500 px-4 py-2
+           font-display text-xs font-bold uppercase tracking-[0.25em] text-white;
+    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
   }
 
+  .section-eyebrow--yellow {
+    @apply bg-brand-eco-500 text-brand-navy-900;
+  }
+
+  .section-eyebrow--outline {
+    @apply border-2 border-brand-cyan-500 bg-transparent text-brand-cyan-400;
+  }
+
+  /* Athletic card — sharp edges, bold border */
   .card-premium {
-    @apply relative overflow-hidden rounded-3xl border border-white/10
-           bg-white/[0.03] backdrop-blur-xl transition-all duration-500
-           hover:border-brand-cyan-500/50 hover:bg-white/[0.06]
-           hover:shadow-premium;
+    @apply relative overflow-hidden border-2 border-white/10
+           bg-brand-navy-900/70 backdrop-blur transition-all duration-300
+           hover:border-brand-cyan-500 hover:bg-brand-navy-800/80
+           hover:shadow-glow;
+  }
+
+  .card-athletic {
+    @apply relative overflow-hidden border-l-4 border-brand-cyan-500
+           bg-gradient-to-br from-brand-navy-800 to-brand-navy-900
+           transition-all duration-300 hover:border-brand-eco-500;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-cyan-400 via-white to-brand-eco-400
+    @apply bg-gradient-to-r from-brand-cyan-500 via-brand-gold-500 to-brand-eco-400
            bg-clip-text text-transparent;
   }
 
   .glass-card {
-    @apply rounded-2xl border border-white/10 bg-white/5
-           backdrop-blur-xl shadow-2xl;
+    @apply border-2 border-white/10 bg-brand-navy-900/80
+           backdrop-blur-xl shadow-athletic;
   }
 
-  .circuit-bg {
-    background-image: radial-gradient(
-        circle at 25% 20%,
-        rgba(0, 194, 235, 0.12) 0%,
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 75% 80%,
-        rgba(16, 185, 129, 0.12) 0%,
-        transparent 40%
-      );
+  /* Diagonal racing-stripe accent */
+  .stripe-accent {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent 0 8px,
+      rgba(225, 29, 46, 0.8) 8px 12px
+    );
+  }
+
+  /* Tilted "race number" badge */
+  .race-number {
+    @apply inline-block rotate-[-2deg] bg-white px-4 py-2 font-display text-2xl font-black text-brand-navy-900 shadow-lg;
+  }
+
+  .skew-cut {
+    clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
   }
 }
 
@@ -156,5 +203,25 @@
 
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /* Giant outlined text for sporty hero */
+  .text-stroke {
+    -webkit-text-stroke: 2px currentColor;
+    color: transparent;
+  }
+
+  .text-stroke-thick {
+    -webkit-text-stroke: 4px currentColor;
+    color: transparent;
+  }
+
+  /* Diagonal stripes utility */
+  .bg-diagonal-stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(225, 29, 46, 0.08) 0 20px,
+      transparent 20px 40px
+    );
   }
 }

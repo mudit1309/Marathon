@@ -47,26 +47,25 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-cyan-500 to-brand-eco-500 p-[2px] shadow-glow">
-                <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-brand-navy-950">
-                  <span className="font-display text-2xl font-black text-white">
-                    M
-                  </span>
-                </div>
+              <div className="relative flex h-14 w-14 items-center justify-center border-2 border-brand-cyan-500 bg-brand-cyan-500 shadow-glow">
+                <span className="font-display text-3xl font-black text-white">
+                  M
+                </span>
+                <span className="absolute -bottom-1 left-0 h-1 w-full bg-brand-eco-500" />
               </div>
               <div>
-                <div className="font-display text-2xl font-black text-white">
+                <div className="font-display text-3xl font-black uppercase tracking-tight text-white">
                   MOJO MARATHONS
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-cyan-400">
-                  Noida · Eco-Cyber Edition
+                <div className="font-display text-xs font-bold uppercase tracking-[0.3em] text-brand-cyan-400">
+                  Noida · 17 May 2026
                 </div>
               </div>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
               {eventInfo.intro}
             </p>
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-brand-eco-500/30 bg-brand-eco-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-brand-eco-400">
+            <div className="mt-6 inline-flex items-center gap-2 border-2 border-brand-eco-500 bg-brand-eco-500 px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-brand-navy-900">
               <Leaf className="h-4 w-4" />
               Eco-Certified Race Day
             </div>
@@ -75,7 +74,7 @@ export default function Footer() {
           {/* Links */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5">
             <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+              <h3 className="font-display text-base font-bold uppercase tracking-[0.2em] text-brand-cyan-400">
                 Event
               </h3>
               <ul className="mt-5 space-y-3">
@@ -92,7 +91,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+              <h3 className="font-display text-base font-bold uppercase tracking-[0.2em] text-brand-cyan-400">
                 Support
               </h3>
               <ul className="mt-5 space-y-3">
@@ -109,7 +108,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+              <h3 className="font-display text-base font-bold uppercase tracking-[0.2em] text-brand-cyan-400">
                 Contact
               </h3>
               <ul className="mt-5 space-y-3 text-sm text-white/60">

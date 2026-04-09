@@ -42,19 +42,19 @@ export default function AboutEvent() {
               description="Mojo Marathons was built for NCR's most ambitious community — runners, creators, corporates and families who want their race day to mean something beyond the finish line."
             />
             <div className="mt-8 grid grid-cols-2 gap-3">
-              <div className="rounded-2xl border border-brand-cyan-500/20 bg-brand-cyan-500/5 p-5">
-                <div className="font-display text-4xl font-black text-white">
+              <div className="border-2 border-brand-cyan-500/40 bg-brand-cyan-500/10 p-5">
+                <div className="font-display text-5xl font-black text-white">
                   5K
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-brand-cyan-400">
+                <div className="mt-1 font-display text-xs font-bold uppercase tracking-widest text-brand-cyan-400">
                   Runners Expected
                 </div>
               </div>
-              <div className="rounded-2xl border border-brand-eco-500/20 bg-brand-eco-500/5 p-5">
-                <div className="font-display text-4xl font-black text-white">
+              <div className="border-2 border-brand-eco-500/40 bg-brand-eco-500/10 p-5">
+                <div className="font-display text-5xl font-black text-white">
                   100%
                 </div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-brand-eco-400">
+                <div className="mt-1 font-display text-xs font-bold uppercase tracking-widest text-brand-eco-400">
                   Eco-Certified
                 </div>
               </div>
@@ -69,10 +69,10 @@ export default function AboutEvent() {
                   delay={idx * 0.08}
                   className="card-premium p-6"
                 >
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-cyan-500/20 to-brand-eco-500/20 text-brand-cyan-400">
+                  <div className="inline-flex h-12 w-12 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/10 text-brand-cyan-400">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-5 font-display text-xl font-bold text-white">
+                  <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-white">
                     {title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-white/60">

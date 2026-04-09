@@ -45,12 +45,12 @@ export default function NewsletterForm({ className, variant = "compact" }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
-          className="flex-1 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-white placeholder-white/40 outline-none backdrop-blur transition focus:border-brand-cyan-500 focus:bg-white/10"
+          className="flex-1 border-2 border-white/15 bg-brand-navy-950/60 px-5 py-3 text-sm font-semibold text-white placeholder-white/40 outline-none backdrop-blur transition focus:border-brand-cyan-500 focus:bg-brand-navy-950/90"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-cyan-500 to-brand-eco-500 px-5 py-3 text-sm font-bold text-brand-navy-900 transition hover:scale-[1.02] disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2 border-2 border-brand-cyan-500 bg-brand-cyan-500 px-5 py-3 font-display text-sm font-bold uppercase tracking-wider text-white transition hover:bg-brand-cyan-600 disabled:opacity-60"
         >
           {status === "loading" ? (
             <Loader2 className="h-4 w-4 animate-spin" />

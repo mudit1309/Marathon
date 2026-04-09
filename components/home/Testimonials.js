@@ -16,8 +16,9 @@ export default function Testimonials() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.1}>
-              <figure className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-all hover:border-brand-cyan-500/40 hover:bg-white/[0.06]">
-                <Quote className="h-8 w-8 text-brand-cyan-500/40" />
+              <figure className="group relative h-full overflow-hidden border-2 border-white/10 bg-brand-navy-900/60 p-7 transition-all hover:-translate-y-1 hover:border-brand-cyan-500/70 hover:bg-brand-navy-900/90">
+                <div className="absolute left-0 top-0 h-1 w-0 bg-brand-cyan-500 transition-all duration-500 group-hover:w-full" />
+                <Quote className="h-10 w-10 text-brand-cyan-500/50" />
                 <blockquote className="mt-4 text-base leading-relaxed text-white/80">
                   “{t.quote}”
                 </blockquote>
@@ -29,11 +30,11 @@ export default function Testimonials() {
                     />
                   ))}
                 </div>
-                <figcaption className="mt-4 border-t border-white/10 pt-4">
-                  <div className="font-display text-base font-bold text-white">
+                <figcaption className="mt-4 border-t-2 border-white/10 pt-4">
+                  <div className="font-display text-base font-bold uppercase tracking-wide text-white">
                     {t.name}
                   </div>
-                  <div className="text-xs text-white/50">{t.role}</div>
+                  <div className="font-display text-xs font-semibold uppercase tracking-wider text-brand-cyan-400">{t.role}</div>
                 </figcaption>
               </figure>
             </Reveal>

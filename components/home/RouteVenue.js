@@ -55,7 +55,7 @@ export default function RouteVenue() {
         <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:items-center">
           {/* Map visual */}
           <Reveal className="lg:col-span-7">
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-navy-800 via-brand-navy-900 to-brand-navy-950 p-6 shadow-premium">
+            <div className="relative overflow-hidden border-2 border-brand-cyan-500/40 bg-gradient-to-br from-brand-navy-800 via-brand-navy-900 to-brand-navy-950 p-6 shadow-athletic">
               <div className="absolute inset-0 bg-circuit-pattern opacity-40" />
 
               {/* SVG fake route */}
@@ -68,8 +68,8 @@ export default function RouteVenue() {
                 >
                   <defs>
                     <linearGradient id="route-gradient" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#00C2EB" />
-                      <stop offset="100%" stopColor="#10B981" />
+                      <stop offset="0%" stopColor="#E11D2E" />
+                      <stop offset="100%" stopColor="#FACC15" />
                     </linearGradient>
                     <filter id="glow">
                       <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -108,20 +108,20 @@ export default function RouteVenue() {
                     { x: 310, y: 120 },
                   ].map((p, i) => (
                     <g key={i}>
-                      <circle cx={p.x} cy={p.y} r="5" fill="#00C2EB" />
-                      <circle cx={p.x} cy={p.y} r="8" fill="none" stroke="#00C2EB" strokeWidth="1" opacity="0.5" />
+                      <circle cx={p.x} cy={p.y} r="5" fill="#E11D2E" />
+                      <circle cx={p.x} cy={p.y} r="8" fill="none" stroke="#E11D2E" strokeWidth="1" opacity="0.5" />
                     </g>
                   ))}
 
                   {/* Start & finish */}
                   <g>
-                    <circle cx="40" cy="250" r="8" fill="#10B981" />
+                    <circle cx="40" cy="250" r="8" fill="#FACC15" />
                     <text x="52" y="255" fill="#fff" fontSize="12" fontWeight="bold">
                       START
                     </text>
                   </g>
                   <g>
-                    <circle cx="360" cy="60" r="8" fill="#FFD166" />
+                    <circle cx="360" cy="60" r="8" fill="#F97316" />
                     <text x="310" y="55" fill="#fff" fontSize="12" fontWeight="bold">
                       FINISH
                     </text>
@@ -130,12 +130,12 @@ export default function RouteVenue() {
               </div>
 
               <div className="relative mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-white/60">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-brand-eco-500" />
+                <div className="flex items-center gap-2 font-display uppercase tracking-wider">
+                  <span className="h-2 w-2 bg-brand-eco-500" />
                   Start
-                  <span className="mx-2 h-2 w-2 rounded-full bg-brand-cyan-500" />
+                  <span className="mx-2 h-2 w-2 bg-brand-cyan-500" />
                   Hydration Stations
-                  <span className="mx-2 h-2 w-2 rounded-full bg-brand-gold-500" />
+                  <span className="mx-2 h-2 w-2 bg-brand-gold-500" />
                   Finish
                 </div>
                 <span className="text-[10px] uppercase tracking-wider text-white/40">
@@ -146,12 +146,12 @@ export default function RouteVenue() {
           </Reveal>
 
           <div className="lg:col-span-5">
-            <div className="glass-card p-6">
-              <div className="flex items-center gap-2 text-sm font-semibold text-brand-cyan-400">
+            <div className="border-2 border-brand-cyan-500/40 bg-brand-navy-900/70 p-6">
+              <div className="flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-brand-cyan-400">
                 <MapPin className="h-4 w-4" />
                 Venue
               </div>
-              <div className="mt-2 font-display text-2xl font-bold text-white">
+              <div className="mt-2 font-display text-3xl font-black uppercase tracking-tight text-white">
                 Noida, Uttar Pradesh
               </div>
               <div className="text-sm text-white/60">
@@ -159,7 +159,7 @@ export default function RouteVenue() {
               </div>
               <Link
                 href="/route-venue"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-cyan-400 hover:underline"
+                className="mt-5 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-wider text-brand-cyan-400 hover:underline"
               >
                 View full route guide
                 <ChevronRight className="h-4 w-4" />
@@ -170,10 +170,10 @@ export default function RouteVenue() {
               {HIGHLIGHTS.slice(0, 4).map(({ icon: Icon, title, description }) => (
                 <div
                   key={title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                  className="border-2 border-white/10 bg-brand-navy-900/60 p-4 transition-colors hover:border-brand-cyan-500/60"
                 >
                   <Icon className="h-5 w-5 text-brand-cyan-400" />
-                  <div className="mt-2 text-sm font-bold text-white">{title}</div>
+                  <div className="mt-2 font-display text-sm font-bold uppercase tracking-wider text-white">{title}</div>
                   <div className="mt-1 text-xs text-white/60">{description}</div>
                 </div>
               ))}

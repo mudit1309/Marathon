@@ -1,3 +1,4 @@
+import PillarSlider from "@/components/home/PillarSlider";
 import Hero from "@/components/home/Hero";
 import AnimatedStats from "@/components/home/AnimatedStats";
 import Countdown from "@/components/home/Countdown";
@@ -16,20 +17,22 @@ import FAQ from "@/components/home/FAQ";
 import ContactSection from "@/components/home/ContactSection";
 
 export const metadata = {
-  title: "Mojo Marathons 2026 | Run the Future. Protect the Planet.",
+  title: "Mojo Marathons 2026 | Run Harder. Noida's Biggest Race.",
   description:
-    "Noida's premier eco-cyber half marathon on 17 May 2026. Chip-timed 21K, 10K and 5K Fun Run. 5,000+ runners. Register now on India Running.",
+    "Noida's biggest half marathon on 17 May 2026. Chip-timed 21K, 10K and 5K Fun Run. 5,000+ runners. Register now on India Running.",
   alternates: { canonical: "/" },
 };
 
 export default function HomePage() {
   return (
     <>
+      {/* Three pillars slider sits at the very top of the page */}
+      <PillarSlider />
       <Hero />
       <AnimatedStats />
-      <AboutEvent />
       <Countdown />
       <RaceCategories />
+      <AboutEvent />
       <RouteVenue />
       <WhyParticipate />
       <EcoSection />

@@ -44,16 +44,17 @@ export default function AnimatedStats() {
           {STATS.map(({ icon: Icon, value, suffix, label }) => (
             <div
               key={label}
-              className="card-premium group p-5 text-center"
+              className="group relative border-2 border-white/10 bg-brand-navy-900/70 p-5 text-center backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-cyan-500/70 hover:bg-brand-navy-900"
             >
-              <div className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-cyan-500/10 text-brand-cyan-400 transition-colors group-hover:bg-brand-cyan-500/20">
+              <div className="absolute left-0 top-0 h-1 w-0 bg-brand-cyan-500 transition-all duration-500 group-hover:w-full" />
+              <div className="mx-auto inline-flex h-11 w-11 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/10 text-brand-cyan-400 transition-colors group-hover:bg-brand-cyan-500/25">
                 <Icon className="h-5 w-5" />
               </div>
-              <div className="mt-3 font-display text-3xl font-black text-white sm:text-4xl">
+              <div className="mt-3 font-display text-4xl font-black text-white sm:text-5xl">
                 <AnimatedNumber value={value} />
                 <span className="text-brand-cyan-400">{suffix}</span>
               </div>
-              <div className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white/60">
+              <div className="mt-1 font-display text-[11px] font-bold uppercase tracking-widest text-white/70">
                 {label}
               </div>
             </div>

@@ -60,24 +60,23 @@ export default function Navbar() {
             aria-label="Mojo Marathons home"
             className="group flex items-center gap-3"
           >
-            <div className="relative h-11 w-11 overflow-hidden rounded-xl bg-gradient-to-br from-brand-cyan-500 to-brand-eco-500 p-[2px] shadow-glow">
-              <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-brand-navy-950">
-                <span className="font-display text-xl font-black text-white">
-                  M
-                </span>
-              </div>
+            <div className="relative flex h-12 w-12 items-center justify-center border-2 border-brand-cyan-500 bg-brand-cyan-500 shadow-glow transition-transform group-hover:scale-105">
+              <span className="font-display text-2xl font-black text-white">
+                M
+              </span>
+              <span className="absolute -bottom-1 left-0 h-1 w-full bg-brand-eco-500" />
             </div>
             <div className="hidden sm:block">
-              <div className="font-display text-lg font-black leading-none tracking-tight text-white">
+              <div className="font-display text-2xl font-black leading-none tracking-tight text-white">
                 MOJO
               </div>
-              <div className="font-display text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-cyan-400">
+              <div className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-brand-cyan-400">
                 Marathons
               </div>
             </div>
           </Link>
 
-          <ul className="hidden items-center gap-1 lg:flex">
+          <ul className="hidden items-center gap-0.5 lg:flex">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href;
               return (
@@ -85,7 +84,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "relative rounded-full px-4 py-2 text-sm font-semibold transition-colors",
+                      "relative px-4 py-2 font-display text-sm font-bold uppercase tracking-wider transition-colors",
                       active
                         ? "text-brand-cyan-400"
                         : "text-white/75 hover:text-white"
@@ -93,7 +92,7 @@ export default function Navbar() {
                   >
                     {link.label}
                     {active && (
-                      <span className="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-brand-cyan-400 to-brand-eco-400" />
+                      <span className="absolute inset-x-3 -bottom-1 h-1 bg-brand-cyan-500" />
                     )}
                   </Link>
                 </li>
@@ -116,7 +115,7 @@ export default function Navbar() {
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen((v) => !v)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center border-2 border-white/15 bg-brand-navy-900/80 text-white lg:hidden"
             >
               {mobileOpen ? (
                 <X className="h-5 w-5" />

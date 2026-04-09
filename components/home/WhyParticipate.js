@@ -33,12 +33,13 @@ export default function WhyParticipate() {
             const Icon = ICONS[item.icon] || Sparkles;
             return (
               <Reveal key={item.title} delay={i * 0.08}>
-                <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan-500/40 hover:bg-white/[0.06]">
-                  <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-brand-cyan-500/10 blur-3xl transition-all duration-500 group-hover:bg-brand-cyan-500/25" />
-                  <div className="relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-cyan-500/20 to-brand-eco-500/20 text-brand-cyan-400 ring-1 ring-brand-cyan-500/20">
+                <div className="group relative h-full overflow-hidden border-2 border-white/10 bg-brand-navy-900/60 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan-500/60 hover:bg-brand-navy-900/90">
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-brand-cyan-500/15 blur-3xl transition-all duration-500 group-hover:bg-brand-cyan-500/30" />
+                  <div className="absolute left-0 top-0 h-1 w-0 bg-brand-cyan-500 transition-all duration-500 group-hover:w-full" />
+                  <div className="relative inline-flex h-14 w-14 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/10 text-brand-cyan-400">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="relative mt-6 font-display text-xl font-bold text-white">
+                  <h3 className="relative mt-6 font-display text-xl font-bold uppercase tracking-wide text-white">
                     {item.title}
                   </h3>
                   <p className="relative mt-2 text-sm leading-relaxed text-white/65">

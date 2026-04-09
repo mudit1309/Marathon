@@ -38,18 +38,18 @@ export default function GalleryPreview() {
           {PLACEHOLDERS.map((p, i) => (
             <div
               key={p.label}
-              className={`group relative aspect-square overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${p.gradient} transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan-500/50 hover:shadow-glow ${
+              className={`group relative aspect-square overflow-hidden border-2 border-white/10 bg-gradient-to-br ${p.gradient} transition-all duration-500 hover:-translate-y-1 hover:border-brand-cyan-500/70 hover:shadow-glow ${
                 i === 0 || i === 5 ? "sm:col-span-2 sm:aspect-[2/1]" : ""
               }`}
             >
               <div className="absolute inset-0 flex items-center justify-center">
-                <Camera className="h-10 w-10 text-white/30 transition-all group-hover:scale-110 group-hover:text-white/60" />
+                <Camera className="h-12 w-12 text-white/30 transition-all group-hover:scale-110 group-hover:text-white/70" />
               </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy-950 via-brand-navy-950/60 to-transparent p-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-white">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy-950 via-brand-navy-950/80 to-transparent p-4">
+                <div className="font-display text-sm font-bold uppercase tracking-widest text-white">
                   {p.label}
                 </div>
-                <div className="text-[10px] text-white/50">Mojo 2025</div>
+                <div className="font-display text-[10px] font-semibold uppercase tracking-wider text-brand-cyan-400">Mojo 2025</div>
               </div>
             </div>
           ))}

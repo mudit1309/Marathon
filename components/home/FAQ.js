@@ -25,10 +25,10 @@ export default function FAQ({ items = defaultFaqs }) {
               <div
                 key={item.question}
                 className={cn(
-                  "overflow-hidden rounded-2xl border transition-all duration-300",
+                  "overflow-hidden border-2 transition-all duration-300",
                   isOpen
-                    ? "border-brand-cyan-500/40 bg-brand-cyan-500/5"
-                    : "border-white/10 bg-white/[0.02] hover:border-white/20"
+                    ? "border-brand-cyan-500/60 bg-brand-cyan-500/10"
+                    : "border-white/10 bg-brand-navy-900/40 hover:border-white/25"
                 )}
               >
                 <button
@@ -37,15 +37,15 @@ export default function FAQ({ items = defaultFaqs }) {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                 >
-                  <span className="font-display text-base font-bold text-white sm:text-lg">
+                  <span className="font-display text-base font-bold uppercase tracking-wide text-white sm:text-lg">
                     {item.question}
                   </span>
                   <span
                     className={cn(
-                      "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-all",
+                      "flex h-9 w-9 shrink-0 items-center justify-center border-2 transition-all",
                       isOpen
-                        ? "border-brand-cyan-500 bg-brand-cyan-500/20 text-brand-cyan-400"
-                        : "border-white/10 text-white/60"
+                        ? "border-brand-cyan-500 bg-brand-cyan-500 text-white"
+                        : "border-white/20 text-white/60"
                     )}
                   >
                     {isOpen ? (
@@ -74,7 +74,7 @@ export default function FAQ({ items = defaultFaqs }) {
           })}
         </div>
 
-        <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center">
+        <div className="mx-auto mt-10 max-w-3xl border-2 border-white/15 bg-brand-navy-900/40 p-6 text-center">
           <HelpCircle className="mx-auto h-6 w-6 text-brand-cyan-400" />
           <p className="mt-3 text-sm text-white/70">
             Still have questions?{" "}

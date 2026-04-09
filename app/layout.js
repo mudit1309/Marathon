@@ -1,21 +1,22 @@
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Barlow, Bebas_Neue } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { eventInfo } from "@/lib/data/eventData";
 
-const inter = Inter({
+const barlow = Barlow({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const spaceGrotesk = Space_Grotesk({
+const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["500", "600", "700"],
+  weight: ["400"],
 });
 
 const siteUrl =
@@ -93,7 +94,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#020a18",
+  themeColor: "#050505",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -148,7 +149,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      className={`${barlow.variable} ${bebasNeue.variable}`}
       suppressHydrationWarning
     >
       <head>

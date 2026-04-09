@@ -61,11 +61,11 @@ export default function EcoSection() {
             const Icon = ICONS[item.icon];
             return (
               <Reveal key={item.title} delay={i * 0.1}>
-                <div className="group relative h-full overflow-hidden rounded-3xl border border-brand-eco-500/20 bg-gradient-to-br from-brand-eco-500/[0.06] to-transparent p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-eco-500/50 hover:shadow-glow-eco">
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-eco-500/15 text-brand-eco-400 ring-1 ring-brand-eco-500/30">
+                <div className="group relative h-full overflow-hidden border-2 border-brand-eco-500/30 bg-brand-navy-900/70 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-brand-eco-500/70 hover:shadow-glow-eco">
+                  <div className="inline-flex h-14 w-14 items-center justify-center border-2 border-brand-eco-500/50 bg-brand-eco-500/15 text-brand-eco-400">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-6 font-display text-xl font-bold text-white">
+                  <h3 className="mt-6 font-display text-xl font-bold uppercase tracking-wide text-white">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-white/65">

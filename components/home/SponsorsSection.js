@@ -53,13 +53,13 @@ function SponsorLogo({ name, size }) {
   // Premium placeholder — swap with <Image /> once real logos are uploaded
   return (
     <div
-      className={`group relative flex ${SIZE_CLASSES[size]} items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] px-6 transition-all duration-500 hover:-translate-y-0.5 hover:border-brand-cyan-500/50 hover:from-brand-cyan-500/10`}
+      className={`group relative flex ${SIZE_CLASSES[size]} items-center justify-center border-2 border-white/10 bg-brand-navy-900/60 px-6 transition-all duration-500 hover:-translate-y-0.5 hover:border-brand-cyan-500/70 hover:bg-brand-navy-900/90`}
     >
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-cyan-500/30 to-brand-eco-500/30 ring-1 ring-white/10">
-          <Award className="h-5 w-5 text-white" />
+        <div className="flex h-10 w-10 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/15">
+          <Award className="h-5 w-5 text-brand-cyan-400" />
         </div>
-        <div className="font-display text-base font-bold tracking-tight text-white sm:text-lg">
+        <div className="font-display text-base font-bold uppercase tracking-wide text-white sm:text-lg">
           {name}
         </div>
       </div>
@@ -90,13 +90,13 @@ export default function SponsorsSection() {
               <Reveal key={tier.key} delay={idx * 0.06}>
                 <div>
                   <div className="mb-5 flex items-center gap-3">
-                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-cyan-500/15 text-brand-cyan-400 ring-1 ring-brand-cyan-500/30">
+                    <div className="inline-flex h-10 w-10 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/15 text-brand-cyan-400">
                       <Icon className="h-4 w-4" />
                     </div>
-                    <h3 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-white/70">
+                    <h3 className="font-display text-sm font-bold uppercase tracking-[0.25em] text-white/80">
                       {tier.label}
                     </h3>
-                    <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-brand-cyan-500/60 to-transparent" />
                   </div>
                   <div
                     className={`grid gap-4 ${
@@ -122,7 +122,7 @@ export default function SponsorsSection() {
         {/* Become a sponsor CTA */}
         <div
           id="become-sponsor"
-          className="mt-20 overflow-hidden rounded-[2.5rem] border border-brand-cyan-500/30 bg-gradient-to-br from-brand-cyan-500/10 via-brand-navy-900/60 to-brand-eco-500/10 p-10 sm:p-14"
+          className="mt-20 overflow-hidden border-2 border-brand-cyan-500/60 bg-gradient-to-br from-brand-navy-800 via-brand-navy-900 to-brand-navy-950 p-10 sm:p-14"
         >
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
@@ -163,12 +163,12 @@ export default function SponsorsSection() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center backdrop-blur"
+                  className="border-2 border-white/15 bg-brand-navy-950/60 p-4 text-center backdrop-blur transition-colors hover:border-brand-cyan-500/60"
                 >
-                  <div className="font-display text-2xl font-black text-white">
+                  <div className="font-display text-3xl font-black text-white">
                     {s.number}
                   </div>
-                  <div className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-white/60">
+                  <div className="mt-1 font-display text-[10px] font-bold uppercase tracking-widest text-brand-cyan-400">
                     {s.label}
                   </div>
                 </div>

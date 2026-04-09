@@ -45,14 +45,15 @@ export default function AudienceTargeting() {
                 const Icon = ICONS[seg.icon] || Users;
                 return (
                   <Reveal key={seg.title} delay={i * 0.08}>
-                    <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-500 hover:-translate-y-0.5 hover:border-brand-cyan-500/40 hover:bg-white/[0.06]">
+                    <div className="group relative h-full overflow-hidden border-2 border-white/10 bg-brand-navy-900/60 p-6 transition-all duration-500 hover:-translate-y-0.5 hover:border-brand-cyan-500/70 hover:bg-brand-navy-900/90">
+                      <div className="absolute left-0 top-0 h-1 w-0 bg-brand-cyan-500 transition-all duration-500 group-hover:w-full" />
                       <div className="flex items-start justify-between">
-                        <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-cyan-500/15 text-brand-cyan-400 ring-1 ring-brand-cyan-500/30">
+                        <div className="inline-flex h-12 w-12 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/15 text-brand-cyan-400">
                           <Icon className="h-5 w-5" />
                         </div>
-                        <ArrowUpRight className="h-5 w-5 text-white/20 transition-all group-hover:text-brand-cyan-400" />
+                        <ArrowUpRight className="h-5 w-5 text-white/25 transition-all group-hover:text-brand-cyan-400" />
                       </div>
-                      <h3 className="mt-5 font-display text-xl font-bold text-white">
+                      <h3 className="mt-5 font-display text-xl font-bold uppercase tracking-wide text-white">
                         {seg.title}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-white/65">
@@ -60,7 +61,7 @@ export default function AudienceTargeting() {
                       </p>
                       <Link
                         href={`/about#${seg.target}`}
-                        className="mt-5 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-brand-cyan-400 hover:underline"
+                        className="mt-5 inline-flex items-center gap-1 font-display text-xs font-bold uppercase tracking-widest text-brand-cyan-400 hover:underline"
                       >
                         {seg.cta}
                       </Link>
@@ -73,26 +74,26 @@ export default function AudienceTargeting() {
 
           {/* Psychographics panel */}
           <div className="lg:col-span-4">
-            <div className="glass-card sticky top-28 p-7">
-              <h3 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-brand-cyan-400">
+            <div className="sticky top-28 border-2 border-brand-cyan-500/50 bg-brand-navy-900/80 p-7">
+              <h3 className="font-display text-sm font-bold uppercase tracking-[0.25em] text-brand-cyan-400">
                 Psychographics
               </h3>
               <div className="mt-5 space-y-3">
                 {PSYCHOGRAPHICS.map(({ icon: Icon, label }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3"
+                    className="flex items-center gap-3 border-2 border-white/10 bg-brand-navy-950/40 px-4 py-3 transition-colors hover:border-brand-eco-500/60"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-eco-500/15 text-brand-eco-400">
+                    <div className="flex h-10 w-10 items-center justify-center border-2 border-brand-eco-500/50 bg-brand-eco-500/15 text-brand-eco-400">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <span className="text-sm font-semibold text-white">
+                    <span className="font-display text-sm font-bold uppercase tracking-wider text-white">
                       {label}
                     </span>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 rounded-2xl border border-brand-eco-500/20 bg-brand-eco-500/5 p-4 text-xs text-white/70">
+              <div className="mt-6 border-2 border-brand-eco-500/40 bg-brand-eco-500/10 p-4 text-xs text-white/75">
                 NCR's most socially-connected running community — with
                 repeat engagement across both editions.
               </div>

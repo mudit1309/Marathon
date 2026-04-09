@@ -83,9 +83,9 @@ export default function ContactSection() {
         <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:items-start">
           {/* Contact info */}
           <aside className="space-y-4 lg:col-span-4">
-            <div className="glass-card p-6">
+            <div className="border-2 border-white/15 bg-brand-navy-900/70 p-6 transition-colors hover:border-brand-cyan-500/60">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-cyan-500/15 text-brand-cyan-400 ring-1 ring-brand-cyan-500/30">
+                <div className="flex h-11 w-11 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/15 text-brand-cyan-400">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -101,9 +101,9 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            <div className="glass-card p-6">
+            <div className="border-2 border-white/15 bg-brand-navy-900/70 p-6 transition-colors hover:border-brand-cyan-500/60">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-eco-500/15 text-brand-eco-400 ring-1 ring-brand-eco-500/30">
+                <div className="flex h-11 w-11 items-center justify-center border-2 border-brand-eco-500/50 bg-brand-eco-500/15 text-brand-eco-400">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
@@ -119,7 +119,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            <div className="glass-card p-6">
+            <div className="border-2 border-white/15 bg-brand-navy-900/70 p-6 transition-colors hover:border-brand-cyan-500/60">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold-500/15 text-brand-gold-400 ring-1 ring-brand-gold-500/30">
                   <MapPin className="h-5 w-5" />
@@ -134,8 +134,8 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            <div className="rounded-2xl border border-brand-cyan-500/20 bg-brand-cyan-500/5 p-5 text-xs text-white/70">
-              <strong className="text-brand-cyan-400">
+            <div className="border-2 border-brand-cyan-500/40 bg-brand-cyan-500/10 p-5 text-xs text-white/75">
+              <strong className="font-display uppercase tracking-wider text-brand-cyan-400">
                 Sponsorship enquiries
               </strong>{" "}
               get a dedicated response within 24 hours — just select
@@ -146,7 +146,7 @@ export default function ContactSection() {
           {/* Form */}
           <form
             onSubmit={onSubmit}
-            className="glass-card relative overflow-hidden p-7 lg:col-span-8 sm:p-10"
+            className="relative overflow-hidden border-2 border-brand-cyan-500/50 bg-brand-navy-900/80 p-7 lg:col-span-8 sm:p-10"
             noValidate
           >
             <div className="grid gap-5 sm:grid-cols-2">
@@ -246,13 +246,13 @@ export default function ContactSection() {
             </div>
 
             {status === "success" && (
-              <div className="mt-5 flex items-start gap-2 rounded-xl border border-brand-eco-500/30 bg-brand-eco-500/10 p-4 text-sm text-brand-eco-300">
+              <div className="mt-5 flex items-start gap-2 border-2 border-brand-eco-500/50 bg-brand-eco-500/15 p-4 text-sm font-semibold text-brand-eco-300">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
                 Thanks! We'll get back to you within 24 hours.
               </div>
             )}
             {status === "error" && (
-              <div className="mt-5 flex items-start gap-2 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-300">
+              <div className="mt-5 flex items-start gap-2 border-2 border-red-500/50 bg-red-500/15 p-4 text-sm font-semibold text-red-300">
                 <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
                 {error}
               </div>
@@ -264,11 +264,11 @@ export default function ContactSection() {
       <style jsx>{`
         .form-input {
           width: 100%;
-          border-radius: 12px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          background-color: rgba(255, 255, 255, 0.04);
-          padding: 0.85rem 1rem;
+          border: 2px solid rgba(255, 255, 255, 0.15);
+          background-color: rgba(5, 5, 5, 0.6);
+          padding: 0.95rem 1rem;
           font-size: 0.875rem;
+          font-weight: 500;
           color: white;
           outline: none;
           transition: all 0.2s;
@@ -277,13 +277,13 @@ export default function ContactSection() {
           color: rgba(255, 255, 255, 0.35);
         }
         .form-input:focus {
-          border-color: #00c2eb;
-          background-color: rgba(255, 255, 255, 0.08);
-          box-shadow: 0 0 0 4px rgba(0, 194, 235, 0.15);
+          border-color: #e11d2e;
+          background-color: rgba(5, 5, 5, 0.85);
+          box-shadow: 0 0 0 4px rgba(225, 29, 46, 0.25);
         }
         select.form-input {
           appearance: none;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300C2EB' stroke-width='3'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23E11D2E' stroke-width='3'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
           background-repeat: no-repeat;
           background-position: right 1rem center;
           padding-right: 2.5rem;
@@ -296,9 +296,9 @@ export default function ContactSection() {
 function Field({ label, required, className = "", children }) {
   return (
     <label className={`block ${className}`}>
-      <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wider text-white/60">
+      <span className="mb-2 inline-block font-display text-xs font-bold uppercase tracking-widest text-brand-cyan-400">
         {label}
-        {required && <span className="ml-1 text-brand-cyan-400">*</span>}
+        {required && <span className="ml-1 text-brand-eco-400">*</span>}
       </span>
       {children}
     </label>

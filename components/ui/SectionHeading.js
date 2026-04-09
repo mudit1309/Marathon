@@ -19,7 +19,7 @@ export default function SectionHeading({
     >
       {eyebrow && <span className="section-eyebrow mb-5">{eyebrow}</span>}
       {title && (
-        <h2 className="section-heading mt-4 text-balance text-white">
+        <h2 className="section-heading mt-5 text-balance text-white">
           {title}
         </h2>
       )}
