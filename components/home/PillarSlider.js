@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -375,16 +374,15 @@ export default function PillarSlider() {
                       {imgErrors[pillar.id] ? (
                         <ImagePlaceholder pillar={pillar} styles={styles} />
                       ) : (
-                        <Image
+                        <img
                           src={pillar.image}
                           alt={pillar.imageAlt}
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 45vw"
-                          className="object-cover"
+                          className="absolute inset-0 h-full w-full object-cover"
                           onError={() =>
                             setImgErrors((e) => ({ ...e, [pillar.id]: true }))
                           }
-                          priority={active === 0}
+                          loading={active === 0 ? "eager" : "lazy"}
+                          decoding="async"
                         />
                       )}
                       {/* Overlay gradient */}

@@ -83,6 +83,27 @@ export default function ContactSection() {
         <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:items-start">
           {/* Contact info */}
           <aside className="space-y-4 lg:col-span-4">
+            <div className="relative aspect-[4/3] w-full overflow-hidden border-2 border-brand-cyan-500/60 shadow-glow skew-cut bg-brand-navy-800">
+              <img
+                src="/get-in-touch.jpg"
+                alt="Get in touch with Mojo Marathons"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-navy-900/90 via-brand-navy-900/30 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="font-display text-xs font-bold uppercase tracking-widest text-brand-cyan-400">
+                  Get In Touch
+                </div>
+                <div className="mt-1 font-display text-2xl font-black uppercase leading-tight text-white">
+                  Let's talk race day.
+                </div>
+              </div>
+            </div>
             <div className="border-2 border-white/15 bg-brand-navy-900/70 p-6 transition-colors hover:border-brand-cyan-500/60">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center border-2 border-brand-cyan-500/50 bg-brand-cyan-500/15 text-brand-cyan-400">
